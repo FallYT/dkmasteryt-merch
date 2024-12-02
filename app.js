@@ -1,5 +1,6 @@
-document.querySelectorAll(".product-card button").forEach(button => {
+// Simple alert for adding to cart
+document.querySelectorAll(".product-card .btn").forEach(button => {
     button.addEventListener("click", () => {
-        alert("Added to cart!");
+        alert("Item added to cart!");
     });
 });
