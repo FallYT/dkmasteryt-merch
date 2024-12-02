@@ -65,7 +65,7 @@ body {
     color: #fff;
     text-align: center;
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    background-color: rgba(30, 30, 30, 0.8); /* Dark Charcoal color overlay */
 }
 
 .hero h1 {
