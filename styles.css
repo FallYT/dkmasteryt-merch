@@ -1,63 +1,3 @@
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif; /* Modern font for readability */
-    background-color: #1a1a1a; /* Dark gray background */
-    color: #f4f4f4; /* Light text color */
-    line-height: 1.6;
-}
-
-/* Header */
-.header {
-    background-color: #333; /* Darker header */
-    color: #fff;
-    padding: 15px 0;
-}
-
-.header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.header .logo img {
-    max-width: 120px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 30px;
-}
-
-.nav-links a {
-    color: #f4f4f4;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    text-transform: uppercase;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #00b3ff; /* Cyan highlight color */
-}
-
-.nav-links .active {
-    color: #00b3ff; /* Highlight active link */
-}
-
 /* Hero Section */
 .hero {
     background: url('images/growtopia-theme.jpg') no-repeat center center/cover;
@@ -66,136 +6,19 @@ body {
     text-align: center;
     background-size: cover;
     background-color: rgba(30, 30, 30, 0.8); /* Dark Charcoal color overlay */
+    position: relative; /* Ensure the overlay stays on top of the image */
+    z-index: 1; /* Ensures the background color is above the image */
+    min-height: 100vh; /* Make the hero section cover the entire screen height */
 }
 
-.hero h1 {
-    font-size: 4rem;
-    margin-bottom: 15px;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 25px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.btn {
-    padding: 12px 25px;
-    background-color: #00b3ff; /* Cyan color for buttons */
-    color: #fff;
-    font-size: 1.2rem;
-    text-decoration: none;
-    border-radius: 5px;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #009ac9; /* Darker cyan on hover */
-}
-
-/* Featured Products */
-.featured-products {
-    background-color: #2a2a2a; /* Darker background for products */
-    padding: 50px 0;
-    text-align: center;
-    border-top: 5px solid #00b3ff; /* Cyan accent */
-}
-
-.featured-products h2 {
-    font-size: 2.5rem;
-    color: #f4f4f4;
-    margin-bottom: 20px;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.product-card {
-    background-color: #3a3a3a; /* Darker gray card */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-.product-img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.product-card h3 {
-    margin-top: 15px;
-    font-size: 1.6rem;
-    color: #f4f4f4;
-}
-
-.product-card .price {
-    font-size: 1.4rem;
-    color: #00b3ff; /* Cyan color for price */
-    margin-top: 10px;
-}
-
-.product-card .btn {
-    margin-top: 20px;
-}
-
-/* About Section */
-.about {
-    background-color: #222; /* Darker background */
-    padding: 50px 0;
-    text-align: center;
-    color: #f4f4f4;
-}
-
-.about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.about p {
-    font-size: 1.2rem;
-    color: #aaa;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Footer */
-.footer {
-    background-color: #1a1a1a; /* Dark background */
-    color: #f4f4f4;
-    padding: 30px 0;
-    text-align: center;
-}
-
-.footer .social-icons {
-    margin-top: 20px;
-}
-
-.footer .social-icons a {
-    color: #f4f4f4;
-    font-size: 1.2rem;
-    margin-left: 20px;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer .social-icons a:hover {
-    color: #00b3ff; /* Cyan hover effect */
-}
-
-.footer p {
-    font-size: 1rem;
+/* Add a dark overlay to the image */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(30, 30, 30, 0.7); /* Darker overlay */
+    z-index: -1; /* Keep it behind the content */
 }
