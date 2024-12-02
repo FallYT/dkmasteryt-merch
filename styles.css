@@ -6,15 +6,15 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Press Start 2P', cursive; /* Pixel-style font */
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #e4f4f8; /* Soft pastel background */
     color: #333;
 }
 
 /* Header */
 .header {
-    background-color: #111;
+    background-color: #7f7fff; /* Growtopia-inspired blue */
     color: #fff;
     padding: 20px 0;
 }
@@ -45,22 +45,24 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .nav-links a:hover {
-    color: #f39c12;
+    color: #ffbb00; /* Bright yellow for hover */
 }
 
 .nav-links .active {
-    color: #f39c12;
+    color: #ffbb00; /* Highlight active link */
 }
 
 /* Hero Section */
 .hero {
-    background: url('images/hero-background.jpg') no-repeat center center/cover;
+    background: url('images/growtopia-blocky-background.jpg') no-repeat center center/cover;
     padding: 100px 0;
     color: #fff;
     text-align: center;
+    background-size: cover;
 }
 
 .hero .container {
@@ -71,6 +73,7 @@ body {
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    font-family: 'Press Start 2P', cursive; /* Pixel-style font */
 }
 
 .hero p {
@@ -80,16 +83,17 @@ body {
 
 .btn {
     padding: 10px 20px;
-    background-color: #f39c12;
+    background-color: #ffbb00;
     color: #fff;
     border: none;
     text-decoration: none;
     font-size: 1rem;
     border-radius: 5px;
+    text-transform: uppercase;
 }
 
 .btn:hover {
-    background-color: #e67e22;
+    background-color: #ff8000; /* Bright orange for hover */
 }
 
 .primary-btn {
@@ -100,6 +104,7 @@ body {
 .featured-products {
     background-color: #fff;
     padding: 50px 0;
+    border-top: 5px solid #ffbb00; /* Yellow accent */
 }
 
 .featured-products h2 {
@@ -127,17 +132,19 @@ body {
 .product-img {
     width: 100%;
     border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .product-card h3 {
     margin-top: 15px;
     font-size: 1.5rem;
+    color: #333;
 }
 
 .product-card .price {
     margin-top: 10px;
     font-size: 1.2rem;
-    color: #f39c12;
+    color: #ffbb00;
 }
 
 .product-card .btn {
@@ -146,7 +153,7 @@ body {
 
 /* About Section */
 .about {
-    background-color: #e9e9e9;
+    background-color: #f5f5f5;
     padding: 50px 0;
     text-align: center;
 }
@@ -165,7 +172,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #111;
+    background-color: #7f7fff;
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -178,5 +185,13 @@ body {
 }
 
 .social-icons a:hover {
-    color: #f39c12;
+    color: #ffbb00;
+}
+
+/* Media Queries (Mobile Friendly) */
+@media screen and (max-width: 768px) {
+    .product-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
