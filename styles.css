@@ -1,22 +1,22 @@
-/* Global Styles */
+/* Reset Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body */
 body {
-    font-family: 'Roboto', sans-serif; /* Modern font for readability */
-    background-color: #1a1a1a; /* Dark gray background */
-    color: #f4f4f4; /* Light text color */
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #f4f4f4; /* Light text */
     line-height: 1.6;
 }
 
 /* Header */
 .header {
-    background-color: #333; /* Darker header */
-    color: #fff;
-    padding: 15px 0;
+    background-color: #1f1f1f;
+    padding: 20px 0;
 }
 
 .header .container {
@@ -29,7 +29,7 @@ body {
 }
 
 .header .logo img {
-    max-width: 120px;
+    width: 150px;
 }
 
 .nav-links {
@@ -43,49 +43,31 @@ body {
 
 .nav-links a {
     color: #f4f4f4;
+    font-size: 1.1rem;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1rem;
     text-transform: uppercase;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #00b3ff; /* Cyan highlight color */
-}
-
-.nav-links .active {
-    color: #00b3ff; /* Highlight active link */
+    color: #00b3ff; /* Cyan hover effect */
 }
 
 /* Hero Section */
 .hero {
-    background: url('images/growtopia-theme.jpg') no-repeat center center/cover;
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
     padding: 120px 0;
-    color: #fff;
     text-align: center;
-    background-size: cover;
-    background-color: rgba(30, 30, 30, 0.8); /* Dark Charcoal color overlay */
-    position: relative; /* Ensure the overlay stays on top of the image */
-    z-index: 1; /* Ensures the background color is above the image */
-    min-height: 100vh; /* Make the hero section cover the entire screen height */
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(30, 30, 30, 0.7); /* Darker overlay */
-    z-index: -1; /* Keep it behind the content */
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    color: #fff;
+    position: relative;
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-bottom: 15px;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
 }
 
 .hero p {
@@ -95,8 +77,8 @@ body {
 }
 
 .btn {
-    padding: 12px 25px;
-    background-color: #00b3ff; /* Cyan color for buttons */
+    padding: 15px 30px;
+    background-color: #00b3ff;
     color: #fff;
     font-size: 1.2rem;
     text-decoration: none;
@@ -106,33 +88,34 @@ body {
 }
 
 .btn:hover {
-    background-color: #009ac9; /* Darker cyan on hover */
+    background-color: #009ac9;
 }
 
 /* Featured Products */
 .featured-products {
-    background-color: #2a2a2a; /* Darker background for products */
     padding: 50px 0;
+    background-color: #222;
     text-align: center;
-    border-top: 5px solid #00b3ff; /* Cyan accent */
 }
 
 .featured-products h2 {
     font-size: 2.5rem;
-    color: #f4f4f4;
-    margin-bottom: 20px;
+    color: #fff;
+    margin-bottom: 40px;
 }
 
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .product-card {
-    background-color: #3a3a3a; /* Darker gray card */
+    background-color: #333;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -140,25 +123,24 @@ body {
 
 .product-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-.product-img {
+.product-card img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .product-card h3 {
-    margin-top: 15px;
     font-size: 1.6rem;
-    color: #f4f4f4;
+    color: #fff;
 }
 
 .product-card .price {
     font-size: 1.4rem;
-    color: #00b3ff; /* Cyan color for price */
+    color: #00b3ff;
     margin-top: 10px;
 }
 
@@ -166,32 +148,16 @@ body {
     margin-top: 20px;
 }
 
-/* About Section */
-.about {
-    background-color: #222; /* Darker background */
-    padding: 50px 0;
-    text-align: center;
-    color: #f4f4f4;
-}
-
-.about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.about p {
-    font-size: 1.2rem;
-    color: #aaa;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 /* Footer */
 .footer {
-    background-color: #1a1a1a; /* Dark background */
-    color: #f4f4f4;
-    padding: 30px 0;
+    background-color: #121212;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
+}
+
+.footer p {
+    font-size: 1rem;
 }
 
 .footer .social-icons {
@@ -199,17 +165,13 @@ body {
 }
 
 .footer .social-icons a {
-    color: #f4f4f4;
+    color: #fff;
     font-size: 1.2rem;
     margin-left: 20px;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .footer .social-icons a:hover {
-    color: #00b3ff; /* Cyan hover effect */
-}
-
-.footer p {
-    font-size: 1rem;
+    color: #00b3ff;
 }
